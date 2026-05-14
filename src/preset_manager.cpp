@@ -1,12 +1,8 @@
 /*
- * preset_mgr — routes genre + UI events into audio_chain.
+ * preset_mgr — routes genre into audio_chain.
  *
  *   spotify_client::poll() ── on track change ──► on_genre(csv)
  *   ui::tick()             ── encoder press   ──► apply_ui_override / clear
- *
- * No ramping. audio_chain::apply() snaps immediately; the changes are small
- * enough that the transient is inaudible. If you ever want a ramp back,
- * keep it isolated to audio_chain.
  */
 
 #include "preset_manager.h"
@@ -55,4 +51,4 @@ void clear_ui_override() {
 const char *last_genre() { return s_last_genre; }
 bool ui_override_active() { return s_override; }
 
-}  // namespace presets
+}

@@ -33,8 +33,5 @@ void loop() {
     spotify::poll();   // rate-limited internally
     //presets::tick();       // advance any in-flight parameter ramp
     //ui::tick();
-    // Tiny yield so we don't starve the Audio Library's USB / interrupt-yield
-    // bookkeeping. The audio DSP itself runs in interrupt context and is
-    // unaffected by anything we do in loop().
     delay(1);
 }

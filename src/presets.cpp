@@ -49,7 +49,7 @@ const Entry kTable[] = {
     { "indie",          { +1, 0, +2 } },
     { "pop",            { +2, 0, +3 } },
 
-    // catch-all (last) — flat
+    // Flat Band EQ -- Default
     { "",                {  0,  0,  0 } },
 };
 
